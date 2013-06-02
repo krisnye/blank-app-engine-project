@@ -1,35 +1,24 @@
-{utility,watcher} = require 'glass-build'
+config =
+    name: "mymodule"
+    node:
+        directory: 'lib'
+    source:
+        directory: 'src'
+    browser:
+        input:
+            sugar: true
+        output:
+            directory: 'war/js'
+            webroot: 'war'
+    appengine:
+        java: 'java'
+        pages: true
 
-javaSource = "src"
+builder = require "glass-build"
 
-isWindows = process.platform is 'win32'
-ext = if isWindows then ".bat" else ""
-server = null
-
-start = ->
-    server = utility.spawn "ant#{ext} runserver"
-
-restart = ((callback) ->
-    kill ->
-        start()
-        callback?()
-    ).debounce(1000)
-
-kill = (callback) ->
-    server?.kill()
-    server = null
-    # in case that doesn't succeed, on windows
-    # we will also do a task kill of all java.exe processes
-    if isWindows
-        utility.exec "taskkill /F /IM java.exe", callback
-    else
-        callback?()
-
-task 'run', 'runs the development server', run = ->
-    restart ->
-        # watch for source changes and restart as needed.
-        watcher.watchDirectory javaSource, {include:".java",initial:false}, (file) ->
-            restart()
-task 'kill', 'kills the development server', kill
-
-
+task 'build', -> builder.build config
+task 'watch', -> builder.watch config
+task 'kill', -> builder.kill config
+task 'test', -> builder.test config
+task 'bump', -> builder.bump config
+task 'publish', -> builder.publish config

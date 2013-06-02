@@ -1,8 +1,11 @@
+{{
+    mm = require "mymodule"
+}}
 <html>
     <head>
         <title>Welcome</title>
     </head>
     <body>
-        <a href="hello">Hello</a>
+        {{ mm.hello() }}
     </body>
 </html>

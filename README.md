@@ -3,13 +3,13 @@ blank-app-engine-project
 
 Blank Template for creating a new app engine project
 
-# Tested Operating Systems
+## Tested Operating Systems
 
 Windows 7
 
 Mac OSX
 
-# Prerequisites
+## Prerequisites
 
 [Java 7 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 
@@ -20,7 +20,7 @@ Mac OSX
 Google App Engine SDK 1.8.1 installed into parent directory
 (folder name should be the default 'appengine-java-sdk-1.8.1')
 
-# Installation
+## Installation
 
 Install coffee-script globally:
 

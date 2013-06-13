@@ -11,16 +11,20 @@ Mac OSX
 
 # Prerequisites
 
-Java 7 SDK
+[Java 7 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 
-NodeJS
+[NodeJS](http://nodejs.org/)
 
-git
+[git](http://git-scm.com/downloads)
 
 Google App Engine SDK 1.8.1 installed into parent directory
 (folder name should be the default 'appengine-java-sdk-1.8.1')
 
 # Installation
+
+Install coffee-script globally:
+
+    npm install -g coffee-script
 
 From the project directory:
 

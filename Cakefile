@@ -5,11 +5,10 @@ config =
     source:
         directory: 'src'
     browser:
-        input:
-            sugar: true
         output:
             directory: 'war/js'
             webroot: 'war'
+            test: 'glass-test'
     appengine:
         java: 'java'
         pages: true

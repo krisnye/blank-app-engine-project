@@ -17,7 +17,7 @@ Mac OSX
 
 [git](http://git-scm.com/downloads)
 
-Google App Engine SDK 1.8.1 installed into parent directory
+[Google App Engine SDK 1.8.1](https://developers.google.com/appengine/downloads#Google_App_Engine_SDK_for_Java) installed into parent directory
 (folder name should be the default 'appengine-java-sdk-1.8.1')
 
 ## Installation

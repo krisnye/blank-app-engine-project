@@ -2,7 +2,8 @@
     # server side require.
     mm = require "mymodule"
     # get a datastore service object
-    datastore = @Packages?.com.google.appengine.api.datastore.DatastoreServiceFactory.getDatastoreService()
+    dspackage = @Packages.com.google.appengine.api.datastore
+    datastore = dspackage.DatastoreServiceFactory.getDatastoreService()
 }}
 <html>
     <head>

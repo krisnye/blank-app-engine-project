@@ -6,13 +6,17 @@ Blank Template for creating a new app engine project
 # Tested Operating Systems
 
 Windows 7
+
 Mac OSX
 
 # Prerequisites
 
 Java 7 SDK
+
 NodeJS
+
 git
+
 Google App Engine SDK 1.8.1 installed into parent directory
 (folder name should be the default 'appengine-java-sdk-1.8.1')
 

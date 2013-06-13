@@ -1,23 +1,22 @@
 config =
-    name: "mymodule"
     node:
-        directory: 'lib'
+        directory: lib = 'lib'
     source:
         directory: 'src'
     browser:
+        input:
+            "mymodule": lib
+            "glass-test": true
         output:
             directory: 'war/js'
             webroot: 'war'
-            test: 'glass-test'
     appengine:
         java: 'java'
         pages: true
 
 builder = require "glass-build"
 
-task 'build', -> builder.build config
-task 'watch', -> builder.watch config
-task 'kill', -> builder.kill config
-task 'test', -> builder.test config
-task 'bump', -> builder.bump config
-task 'publish', -> builder.publish config
+task 'build', "rebuilds the entire project", -> builder.build config
+task 'watch', "builds the project, runs the server and watches for changes", -> builder.watch config
+task 'kill', "kills any java processes left hanging on windows", -> builder.kill config
+task 'test', "runs the command line unit tests", -> builder.test config
